@@ -1,47 +1,46 @@
-# Statystyczna-Analiza-Danych-AGH-Projekt-2
+# Statistical Data Analysis - AGH Project 2
 
-Projekt zaliczeniowy z przedmiotu **Statystyczna analiza danych** (AGH).  
-Temat: **skalowanie wielowymiarowe (MDS)** i **analiza składowych głównych (PCA)** na danych o krajach świata.
-
----
-
-## Cel
-
-- wykonać MDS dwiema metodami:  
-  - klasyczne MDS – `cmdscale()`,  
-  - skalowanie Sammona – `MASS::sammon()`;
-- przeprowadzić PCA na macierzy korelacji (`eigen()`, `prcomp()`),
-- porównać wyniki MDS i PCA oraz zinterpretować różnice między krajami.
+Final project for the **Statistical Data Analysis** course (AGH University of Science and Technology).
+Topic: **Multidimensional Scaling (MDS)** and **Principal Component Analysis (PCA)** on world country data.
 
 ---
 
-## Dane
+## Objective
 
-Plik: **`countries of the world.csv`**  
-Jedna obserwacja = 1 kraj.
+- Perform MDS using two methods:
+  - Classical MDS – `cmdscale()`,
+  - Sammon mapping – `MASS::sammon()`.
+- Conduct PCA on the correlation matrix (`eigen()`, `prcomp()`).
+- Compare MDS and PCA results and interpret the differences between countries.
 
-Użyte zmienne (wskaźniki rozwoju):
+---
 
+## Data
+
+File: **`countries of the world.csv`**
+One observation = 1 country.
+
+Variables used (development indicators):
 - `GDP ($ per capita)`, `Infant mortality`, `Literacy`, `Phones`,
 - `Birthrate`, `Deathrate`,
 - `Agriculture`, `Industry`, `Service`.
 
-W repo jest też **`countries_clean_scaled.csv`** – dane po czyszczeniu i standaryzacji.
+The repository also contains **`countries_clean_scaled.csv`** – data after cleaning and standardization.
 
 ---
 
-## Pliki
+## Files
 
-- `Projekt 2.Rmd` – kod + opis (R Markdown),
-- `Projekt-2.html` – wyrenderowany raport,
-- `countries of the world.csv` – surowe dane,
-- `countries_clean_scaled.csv` – dane przygotowane.
+- `Projekt 2.Rmd` – Source code and description (R Markdown),
+- `Projekt-2.html` – Rendered report,
+- `countries of the world.csv` – Raw data,
+- `countries_clean_scaled.csv` – Prepared data.
 
 ---
 
-## Co robimy w analizie
+## Analysis Workflow
 
-- **EDA**: statystyki, histogramy, boxploty, korelacje, test Bartletta.  
-- **MDS**: cmdscale 2D/3D i Sammon 2D, obliczenie STRESS, porównanie jakości.  
-- **PCA**: wartości własne, scree plot, biplot, interpretacja PC1–PC3.  
-- **Porównanie MDS vs PCA**: korelacje współrzędnych, wnioski, które zmienne najmocniej różnicują kraje i ile składowych wystarczy (PC1–PC3 ≈ 85% wariancji).
+- **EDA**: Descriptive statistics, histograms, boxplots, correlations, Bartlett's test.
+- **MDS**: 2D/3D cmdscale and 2D Sammon, STRESS calculation, quality comparison.
+- **PCA**: Eigenvalues, scree plot, biplot, interpretation of PC1–PC3.
+- **Comparison**: Correlation of coordinates, conclusions on which variables differentiate countries the most and how many components are sufficient (PC1–PC3 ≈ 85% variance).
