@@ -1,4 +1,4 @@
-# AGH Project 2: Statistical Data Analysis
+# Statistical Data Analysis
 
 Final project for the **Statistical Data Analysis** course (AGH University of Science and Technology).
 Topic: **Multidimensional Scaling (MDS)** and **Principal Component Analysis (PCA)** on world country data.
